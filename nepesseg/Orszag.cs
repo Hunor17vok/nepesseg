@@ -11,7 +11,7 @@ namespace nepesseg
         
     public string Orszagnev { get; private set; }
         public int Terulet { get; private set; }
-        public int Nepesseg { get; private set; }
+        public string Nepesseg { get; private set; }
         public string Fovaros { get; private set; }
         public int FovarosNepesseg { get; private set; }
 
@@ -19,7 +19,7 @@ namespace nepesseg
         {
             Orszagnev = orszagnev;
             Terulet = terulet;
-            Nepesseg = nepesseg;
+            //Nepesseg = nepesseg;
             Fovaros = fovaros;
             FovarosNepesseg = fovarosNepesseg;
         }
@@ -29,7 +29,7 @@ namespace nepesseg
             string[] a = sor.Split(";");
             Orszagnev = a[0];
             Terulet = int.Parse(a[1]);
-            Nepesseg = int.Parse(a[2]);
+            Nepesseg = a[2];
             Fovaros = a[3];
             FovarosNepesseg = int.Parse(a[4]);
         }
