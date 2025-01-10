@@ -26,8 +26,12 @@ namespace nepesseg
 
         public Orszag(string sor)
         {
-            // Ebben a konstruktorban is elvégezheti az adatsor felbontását!
-            // Ha nem ezt választja, akkor törölje ezt a konstruktort!
+            string[] a = sor.Split(";");
+            Orszagnev = a[0];
+            Terulet = int.Parse(a[1]);
+            Nepesseg = int.Parse(a[2]);
+            Fovaros = a[3];
+            FovarosNepesseg = int.Parse(a[4]);
         }
 
         public override string ToString()
